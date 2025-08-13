@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Enemy Within \u2014 A Novella",
+    "price": 9.99,
+    "category": "Fiction",
+    "tags": [
+      "thriller",
+      "muslim",
+      "novella"
+    ],
+    "image": "assets/cover_enemy_within.jpg",
+    "checkout_url": "https://payhip.com/b/EXAMPLE1"
+  },
+  {
+    "title": "Gl\u00faten Nunca Mais: Guia Pr\u00e1tico e Gostoso",
+    "price": 7.0,
+    "category": "Health",
+    "tags": [
+      "gluten-free",
+      "receitas",
+      "pt"
+    ],
+    "image": "assets/cover_gluten.jpg",
+    "checkout_url": "https://gumroad.com/l/EXAMPLE2"
+  },
+  {
+    "title": "Side Hustles in Mozambique (Finch-style)",
+    "price": 5.0,
+    "category": "Business",
+    "tags": [
+      "Mozambique",
+      "renda extra",
+      "mtn",
+      "mpesa"
+    ],
+    "image": "assets/cover_mz_side_hustle.jpg",
+    "checkout_url": "https://checkout.lemonsqueezy.com/buy/EXAMPLE3"
+  },
+  {
+    "title": "Islamic Trivia Pack (EN/PT)",
+    "price": 3.5,
+    "category": "Religion",
+    "tags": [
+      "islam",
+      "trivia",
+      "hadith"
+    ],
+    "image": "assets/cover_islamic_trivia.jpg",
+    "checkout_url": "https://yourshop.myshopify.com/products/islamic-trivia"
+  }
+]
