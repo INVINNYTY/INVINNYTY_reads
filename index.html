@@ -49,8 +49,58 @@
 @media (max-width: 640px) {
   .hero-copy {
     text-align: center;
+  /* HERO layout: 2 columns on desktop, 1 column on mobile */
+.hero{
+  display:grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items:center;
+  gap:16px;
+  margin: 16px 0 20px;
+}
+
+/* Logo sizing */
+.hero-logo{
+  display:block;
+  margin:0 auto;
+  width: clamp(160px, 30vw, 360px);
+  height:auto;
+  object-fit:contain;
+  border:0;
+}
+
+/* CTA button style */
+.btn{
+  display:inline-block;
+  margin-top:12px;
+  padding:10px 16px;
+  border-radius:12px;
+  font-weight:700;
+  background:#e6f0ff;
+  color:#111;
+  border:1px solid #9bbcff;
+  text-decoration:none;
+}
+.btn:hover{ filter:brightness(0.95); }
+
+/* Category chips row: allow touch scroll on mobile */
+.filters{
+  overflow-x:auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type:x proximity;
+}
+
+/* Mobile tweaks */
+@media (max-width: 640px){
+  .hero{
+    grid-template-columns: 1fr;     /* stack */
+    text-align:center;              /* center text */
+  }
+  .hero-logo{
+    width: clamp(180px, 50vw, 280px);
+    margin-top:6px;
   }
 }
+
   </style>
 </head>
 <body>
@@ -73,9 +123,9 @@
     <span class="pill">📚 Instant download • Secure checkout</span>
     <h1>Your one‑stop shop for ebooks</h1>
     <p>Pick a category, pay securely, and download instantly.</p>
+    <a class="btn" href="#all">Browse all eBooks</a>
   </div>
 
-  <!-- clean, centered, responsive logo -->
   <img class="hero-logo" src="assets/logo.png" alt="INVINNYTY Reads">
 </section>
 
