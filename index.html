@@ -46,26 +46,38 @@
   object-fit: contain;
 }
 
-@media (max-width: 640px) {
-  .hero-copy {
-    text-align: center;
-  /* HERO layout: 2 columns on desktop, 1 column on mobile */
-.hero{
-  display:grid;
-  grid-template-columns: 1.2fr 1fr;
-  align-items:center;
-  gap:16px;
+/* HERO layout for desktop */
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; /* Two columns on desktop */
+  align-items: center;
+  gap: 16px;
   margin: 16px 0 20px;
 }
 
+/* Left side text */
+.hero-copy {
+  text-align: left;
+}
+/* Right side logo container (desktop & mobile) */
+.hero-art{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#0f1620;           /* subtle panel */
+  border:1px solid #262a36;      /* thin outline */
+  border-radius:12px;
+  padding:16px;
+  min-height:220px;              /* keeps the panel from collapsing */
+}
 /* Logo sizing */
-.hero-logo{
-  display:block;
-  margin:0 auto;
-  width: clamp(160px, 30vw, 360px);
-  height:auto;
-  object-fit:contain;
-  border:0;
+.hero-logo {
+  display: block;
+  margin: 0 auto;
+  width: clamp(180px, 30vw, 320px);
+  height: auto;
+  object-fit: contain;
+  border: 0;
 }
 
 /* CTA button style */
@@ -90,17 +102,21 @@
 }
 
 /* Mobile tweaks */
-@media (max-width: 640px){
-  .hero{
-    grid-template-columns: 1fr;     /* stack */
-    text-align:center;              /* center text */
+@media (max-width: 640px) {
+  .hero {
+    grid-template-columns: 1fr; /* Stack vertically */
+    text-align: center;
   }
-  .hero-logo{
-    width: clamp(180px, 50vw, 280px);
-    margin-top:6px;
+  .hero-copy {
+    text-align: center;
+  }
+  .hero-art {
+    margin-top: 12px;
+  }
+  .hero-logo {
+    width: clamp(160px, 50vw, 280px);
   }
 }
-
   </style>
 </head>
 <body>
@@ -122,11 +138,13 @@
     <span class="pill">📚 Instant download • Secure checkout</span>
     <h1>Your one‑stop shop for ebooks</h1>
     <p>Pick a category, pay securely, and download instantly.</p>
-    <a class="btn" href="#all">Browse all eBooks</a>
   </div>
 
-  <img class="hero-logo" src="assets/logo.png" alt="INVINNYTY Reads">
+  <div class="hero-art">
+    <img class="hero-logo" src="assets/logo.png" alt="INVINNYTY Reads">
+  </div>
 </section>
+
 
 <section class="search">
   <input id="q" placeholder="Search title, author, or topic…">
