@@ -58,6 +58,7 @@
 .hero-copy {
   flex: 1;
   min-width: 260px;
+  <a class="btn" href="#all">Browse all eBooks</a>
 }
 
 .hero-art {
@@ -95,14 +96,27 @@
 /* Mobile tweaks */
 @media (max-width: 640px) {
   .hero {
-    flex-direction: column;
-    text-align: center;
+    grid-template-columns: 1fr;   /* stack */
+    align-items: start;
+    text-align: left;             /* title/paragraph left */
   }
-  .hero-copy {
-    order: 1;
-  }
+
+  .hero-copy { text-align: left; }
+
+  /* the logo container */
   .hero-art {
-    order: 2;
+    display: flex;
+    justify-content: flex-start;  /* push logo to the left */
+    align-items: flex-start;
+    margin-top: 12px;             /* a little breathing room */
+  }
+
+  /* the logo image itself */
+  .hero-logo {
+    width: clamp(160px, 50vw, 280px);
+    height: auto;
+    object-fit: contain;
+    margin: 0;                    /* remove auto-centering */
   }
 }
   </style>
