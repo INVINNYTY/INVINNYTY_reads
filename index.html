@@ -58,7 +58,6 @@
 .hero-copy {
   flex: 1;
   min-width: 260px;
-  <a class="btn" href="#all">Browse all eBooks</a>
 }
 
 .hero-art {
@@ -94,29 +93,41 @@
 }
 
 /* Mobile tweaks */
-@media (max-width: 640px) {
-  .hero {
-    grid-template-columns: 1fr;   /* stack */
-    align-items: start;
-    text-align: left;             /* title/paragraph left */
+@media (max-width: 640px){
+  /* keep two columns on mobile, like your screenshot */
+  .hero{
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; /* text left, logo right */
+    align-items: center;
+    gap: 12px;
+    margin: 8px 0 12px;
+    text-align: left; /* avoid center overrides */
   }
 
-  .hero-copy { text-align: left; }
+  .hero-copy{
+    text-align: left;
+  }
 
-  /* the logo container */
-  .hero-art {
+  /* right-side logo container */
+  .hero-art{
     display: flex;
-    justify-content: flex-start;  /* push logo to the left */
-    align-items: flex-start;
-    margin-top: 12px;             /* a little breathing room */
+    justify-content: center;   /* center inside its column */
+    align-items: center;
+    margin-top: 0;
   }
 
-  /* the logo image itself */
-  .hero-logo {
-    width: clamp(160px, 50vw, 280px);
+  /* the logo itself */
+  .hero-logo{
+    width: clamp(120px, 32vw, 220px);
     height: auto;
     object-fit: contain;
-    margin: 0;                    /* remove auto-centering */
+    margin: 0;
+    border: 0;
+  }
+
+  /* ensure CTA shows inline under the paragraph */
+  .btn{
+    display: inline-block;
   }
 }
   </style>
@@ -140,6 +151,7 @@
     <span class="pill">📚 Instant download • Secure checkout</span>
     <h1>Your one‑stop shop for ebooks</h1>
     <p>Pick a category, pay securely, and download instantly.</p>
+     <a class="btn" href="#all">Browse all eBooks</a>
   </div>
 
   <div class="hero-art">
