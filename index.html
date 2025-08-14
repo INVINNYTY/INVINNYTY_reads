@@ -47,39 +47,36 @@
 }
 
 /* HERO layout for desktop */
-.hero {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr; /* Two columns on desktop */
-  align-items: center;
-  gap: 16px;
-  margin: 16px 0 20px;
+.hero{
+  display:grid;
+  grid-template-columns: 1.4fr 1fr;   /* text : logo */
+  align-items:center;
+  gap:24px;
+  margin:24px 0 16px;
 }
 
-/* Left side text */
-.hero-copy {
-  text-align: left;
-}
-/* Right side logo container (desktop & mobile) */
+/* left side text */
+.hero-copy{ text-align:left; }
+
+/* right side logo container (no panel) */
 .hero-art{
   display:flex;
   justify-content:center;
   align-items:center;
-  background:#0f1620;           /* subtle panel */
-  border:1px solid #262a36;      /* thin outline */
-  border-radius:12px;
-  padding:16px;
-  min-height:220px;              /* keeps the panel from collapsing */
-}
-/* Logo sizing */
-.hero-logo {
-  display: block;
-  margin: 0 auto;
-  width: clamp(180px, 30vw, 320px);
-  height: auto;
-  object-fit: contain;
-  border: 0;
+  background:none;        /* remove the blue card */
+  border:none;
+  padding:0;
 }
 
+/* logo sizing */
+.hero-logo{
+  display:block;
+  margin:0 auto;
+  width:clamp(180px, 22vw, 260px);
+  height:auto;
+  object-fit:contain;
+  border:0;
+}
 /* CTA button style */
 .btn{
   display:inline-block;
@@ -102,20 +99,18 @@
 }
 
 /* Mobile tweaks */
-@media (max-width: 640px) {
-  .hero {
-    grid-template-columns: 1fr; /* Stack vertically */
-    text-align: center;
+@media (max-width: 640px){
+  .hero{
+    grid-template-columns:1fr;   /* stack vertically */
+    text-align:center;
+    gap:16px;
+    margin:16px 0 20px;
   }
-  .hero-copy {
-    text-align: center;
-  }
-  .hero-art {
-    margin-top: 12px;
-  }
-  .hero-logo {
-    width: clamp(160px, 50vw, 280px);
-  }
+  .hero-copy{ text-align:center; }
+  .hero-art{ margin-top:8px; }
+  .hero-logo{ width:clamp(160px, 50vw, 240px); }
+}
+
 }
   </style>
 </head>
