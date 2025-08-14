@@ -47,35 +47,36 @@
 }
 
 /* HERO layout for desktop */
-.hero{
-  display:grid;
-  grid-template-columns: 1.4fr 1fr;   /* text : logo */
-  align-items:center;
-  gap:24px;
-  margin:24px 0 16px;
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr; /* Slightly closer proportions */
+  align-items: center;
+  gap: 8px; /* Less gap so text & logo are closer */
+  margin: 8px 0; /* Reduce top & bottom spacing */
 }
 
-/* left side text */
-.hero-copy{ text-align:left; }
-
-/* right side logo container (no panel) */
-.hero-art{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:none;        /* remove the blue card */
-  border:none;
-  padding:0;
+/* Left side text */
+.hero-copy {
+  text-align: left;
+  max-width: 500px; /* Keeps it from stretching too wide */
+  margin-bottom: 0; /* Remove extra bottom space */
 }
 
-/* logo sizing */
-.hero-logo{
-  display:block;
-  margin:0 auto;
-  width:clamp(180px, 22vw, 260px);
-  height:auto;
-  object-fit:contain;
-  border:0;
+/* Right side logo */
+.hero-art {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo size */
+.hero-logo {
+  display: block;
+  margin: 0 auto;
+  width: clamp(160px, 28vw, 300px); /* Slightly smaller for better fit */
+  height: auto;
+  object-fit: contain;
+  border: 0;
 }
 /* CTA button style */
 .btn{
@@ -99,18 +100,25 @@
 }
 
 /* Mobile tweaks */
-@media (max-width: 640px){
-  .hero{
-    grid-template-columns:1fr;   /* stack vertically */
-    text-align:center;
-    gap:16px;
-    margin:16px 0 20px;
+@media (max-width: 640px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin: 4px 0; /* Pull it closer on small screens */
   }
-  .hero-copy{ text-align:center; }
-  .hero-art{ margin-top:8px; }
-  .hero-logo{ width:clamp(160px, 50vw, 240px); }
-}
+  
+  .hero-copy {
+    text-align: center;
+    margin-bottom: 8px; /* Keep description closer to logo */
+  }
 
+  .hero-art {
+    margin-top: 8px;
+  }
+
+  .hero-logo {
+    width: clamp(140px, 40vw, 240px);
+  }
 }
   </style>
 </head>
