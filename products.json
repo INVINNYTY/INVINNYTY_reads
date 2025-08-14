@@ -4,7 +4,7 @@
     "price": 3.99,
     "category": "Health",
     "tags": ["anxiety", "mental-health", "self-help"],
-     "image": "assets/cover_anxiety_survival.jpg",
+     "image": "assets/Anxiety survival guide.png",
     "checkout_url": "YOUR_CHECKOUT_LINK_FOR_ANXIETY_GUIDE" 
   },
   {
@@ -12,7 +12,7 @@
     "price": 7.0,
     "category": "Health",
     "tags": ["gluten-free", "nutrition"],
-    "image": "assets/cover_gluten.jpg",
+    "image": "assets/Gluten nunca mais.jpg",
     "checkout_url": "https://gumroad.com/l/EXAMPLE2"
   }
 ]
