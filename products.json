@@ -1,7 +1,7 @@
 [
   {
     "title": "The Anxiety Survival Guide",
-    "price": 3.99,
+    "price": 4.0,
     "category": "Health",
     "tags": ["anxiety", "mental-health", "self-help"],
      "image": "assets/Anxiety survival guide.png",
@@ -9,10 +9,18 @@
   },
   {
     "title": "Gl\u00faten Nunca Mais: Guia Pr\u00e1tico e Gostoso",
-    "price": 7.0,
+    "price": 2.0,
     "category": "Health",
     "tags": ["gluten-free", "nutrition"],
     "image": "assets/Gluten nunca mais.png",
+    "checkout_url": "https://invinnyty.gumroad.com/l/uyqohy?_gl=1*1r8t04t*_ga*MTQ2NjI2ODIzLjE3NTQwNDIzNTA.*_ga_6LJN6D94N6*czE3NTUxOTI4NjMkbzYkZzEkdDE3NTUxOTM0MzIkajQ1JGwwJGgw"
+  },
+    {
+    "title": "Delight Forlife",
+    "price": 2.0,
+    "category": "Health",
+    "tags": ["recipe", "nutrition"],
+    "image": "assets/Delight forlife.png",
     "checkout_url": "https://invinnyty.gumroad.com/l/uyqohy?_gl=1*1r8t04t*_ga*MTQ2NjI2ODIzLjE3NTQwNDIzNTA.*_ga_6LJN6D94N6*czE3NTUxOTI4NjMkbzYkZzEkdDE3NTUxOTM0MzIkajQ1JGwwJGgw"
   }
 ]
